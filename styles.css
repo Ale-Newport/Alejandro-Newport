@@ -1,0 +1,110 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #2e2e2e;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 20%;
+    background-color: #363636;
+    padding: 20px;
+    position: fixed;
+    height: 100%;
+    animation: fadeInLeft 1.5s;
+}
+.profile {
+    text-align: center;
+    animation: fadeInDown 1s;
+}
+.profile h1{
+    font-size: 2.5em;
+}
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid #ffcc00;
+}
+.links {
+    color: #ffcc00;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.links:hover {
+    color: #ff9900;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 25%;
+    padding: 20px;
+    animation: fadeInRight 1.5s;
+}
+.hero {
+    text-align: left;
+    margin-bottom: 40px;
+}
+.hero h2 {
+    font-size: 2em;
+    animation: fadeInDown 1s;
+}
+.hero p {
+    font-size: 1.2em;
+    animation: fadeInDown 1s;
+}
+.experience {
+    background-color: #515151;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    animation: fadeInUp 1s;
+}
+
+
+/* Animations */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
