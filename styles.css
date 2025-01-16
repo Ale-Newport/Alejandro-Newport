@@ -6,9 +6,52 @@ body {
     color: #fff;
     overflow-x: hidden;
 }
+body h1, h2, h3{
+    color: #3d8bff;
+}
+body a {
+    color: #3d8bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+body a:hover {
+    color: #0f52fd;
+}
+/* light mode */
+body.light-mode {
+    background-color: #e0e0e0;
+    color: #000;
+}
+body.light-mode .sidebar {
+    background-color: #d9d9d9;
+    color: #000;
+}
+body.light-mode h1, h2, h3{
+    color: #0854b1;
+}
+body.light-mode a {
+    color: #0854b1;
+}
+body.light-mode a:hover{
+    color: #082ea2;
+}
+body.light-mode .job {
+    background-color: #c9c9c9;
+}
+body.light-mode .project {
+    background-color: #c9c9c9;
+}
+body.light-mode .education-item {
+    background-color: #c9c9c9;
+}
+
 
 /* Sidebar */
 .sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     width: 20%;
     background-color: #363636;
     padding: 20px;
@@ -16,33 +59,203 @@ body {
     height: 100%;
     animation: fadeInLeft 1.5s;
 }
+/* profile */
 .profile {
     text-align: center;
     animation: fadeInDown 1s;
 }
-.profile h1{
+.profile h1 {
     font-size: 2.5em;
 }
 .profile-img {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     border: 3px solid #ffcc00;
+    object-fit: cover;
 }
-.links {
-    color: #ffcc00;
-    text-decoration: none;
-    transition: color 0.3s;
+/* socials */
+.socials-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s;
 }
-.links:hover {
-    color: #ff9900;
+.socials {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
 }
+.social {
+    font-size: 1.8em;
+    padding: 20px;
+}
+/* Switchs */
+.switchs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: auto;
+}
+.switch-container {
+    padding: 10px;
+}
+/* Flag Switch */
+.switch-flag {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+    background-color: #565656;
+    border-radius: 20px;
+}
+body.light-mode .switch-flag {
+    background-color: #b4b4b4;
+}
+.switch-flag input {
+    display: none;
+}
+.slider-flag {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #ccc;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.flag-wrapper {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+}
+.switch-flag input:checked + .slider-flag .flag-wrapper {
+    transform: translateX(26px);
+}
+.flag {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+.flag-uk {
+    opacity: 0;
+}
+.flag-es {
+    opacity: 1;
+}
+.switch-flag input:checked + .slider-flag .flag-uk {
+    opacity: 1;
+}
+.switch-flag input:checked + .slider-flag .flag-es {
+    opacity: 0;
+}
+/* Theme Switch */
+.switch-theme {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+    background: linear-gradient(to bottom, #5bc0ff, #cfcfcf);
+    border-radius: 20px;
+    cursor: pointer;
+    overflow: hidden;
+}
+body.light-mode .switch-theme {
+    background: linear-gradient(to bottom, #232323, #5e5e5e);
+}
+.switch-theme input {
+    display: none;
+}
+.slider-theme {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+.icon-wrapper {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.switch-theme input:checked + .slider-theme .icon-wrapper {
+    transform: translateX(26px);
+    background-color: #121212;
+}
+.moon, .sun {
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    transition: opacity 0.3s ease;
+}
+.moon {
+    background-color: #d8d8cf;
+    box-shadow: 0 0 50px 2px #cfcec6;
+    opacity: 0;
+}
+.moon::before {
+    content: '';
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    background: linear-gradient(to bottom, #0f0f0f, #2e2e2e);
+    border-radius: 50%;
+    top: 0;
+    left: 8px;
+}
+.sun {
+    background-color: #ffcc00;
+    box-shadow: 0 0 10px 3px #ffcc00;
+    opacity: 1;
+}
+.switch-theme input:checked + .slider-theme .moon {
+    opacity: 1;
+}
+.switch-theme input:checked + .slider-theme .sun {
+    opacity: 0;
+}
+
+
+
+/* footer */
+.footbar {
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 40px;
+}
+
 
 /* Main Content */
 .main-content {
     margin-left: 25%;
-    padding: 20px;
+    margin-right: 20px;
     animation: fadeInRight 1.5s;
 }
 .hero {
@@ -58,12 +271,58 @@ body {
     animation: fadeInDown 1s;
 }
 .experience {
+    text-align: left;
+    margin-bottom: 40px;
+}
+.job {
     background-color: #515151;
     padding-left: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
     border-radius: 10px;
     animation: fadeInUp 1s;
+}
+.projects {
+    text-align: left;
+    margin-bottom: 40px;
+}
+.project {
+    background-color: #515151;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    animation: fadeInUp 1s;
+}
+.project-title {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+.education {
+    text-align: left;
+    margin-bottom: 40px;
+}
+.education-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #515151;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    animation: fadeInUp 1s;
+}
+.education-text {
+    flex: 1;
+}
+.education-logo {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
 }
 
 
