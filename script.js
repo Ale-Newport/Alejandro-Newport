@@ -7,80 +7,84 @@ themeSwitch.addEventListener('change', () => {
 // Language content
 const content = {
     en: {
-        profileSubtitle: "MSci Computer Science Student",
-        footerText: "© Website made by Alejandro Newport - Last update January 2025",
+        profileSubtitle: "BSc Computer Science Student",
+        footerText: "© Website made by Alejandro Newport - Last update May 2025",
         heroTitle: "My Portfolio",
         heroText1: "Computer Science student at King’s College London, pursuing an MSci degree with First-class Honours. With a strong academic foundation in Artificial Intelligence, Full-stack Web Development, Software Engineering, Data Structures and Algorithms, paired with a passion for innovation, the focus is on building impactful and efficient technological solutions of real-world problems.",
         heroText2: "Proficient in multiple programming languages such as Python, Java, C++, Scala, JavaScript, as well as frameworks like Vue.js, Node.js, and Django. This expertise is underpinned by hands-on work experience in Grupo Newport and several projects. Recognized for a unique ability to merge technical knowledge with creativity, consistently delivering innovative solutions. Dedicated to leveraging advanced technologies to create transformative tools that optimize performance and enhance user experiences.",
         
-        workExperienceTitle: "Work Experience",
-        jobTitle: "Software Developer and Systems Technician",
-        jobCompany: "<em><a href='https://gruponewport.com' target='_blank'>Grupo Newport</a>, Spain (June 2024 - September 2024)</em>",
-        jobPoints: [
-            "Provided IT systems support across the company, implementing automation processes to reduce improving overall efficiency in 30%, ensuring optimal functionality.",
-            "Repaired damaged hardware and installed multiple software packages for approx. 200 computer units.",
-            "Collaborated with cross-functional teams, integrating software solutions across departments and improving system functionality.",
-            "Developed 100% of the front-end code for the company's website <a href='https://nformar.com/' target='_blank'>NFORMAR</a>, ensuring a seamless user experience and responsive design."
-        ],
-        
-        projectsTitle: "Projects",
-        project1Title: "Autonomous Drone Development:",
-        project1Desc: "Designed and developed an autonomous drone capable of navigating complex environments using AI algorithms and integrated sensor data to improve flight accuracy and obstacle avoidance. Technologies: Python, C++, TensorFlow, Arduino.",
-        project2Title: "Hackathon Projects:",
-        project2Desc: "Participated in various hackathons, achieving podium finishes with projects that addressed real-world problems using AI and machine learning. Developed a web-based application that streamlined data processing for SMEs, reducing operational bottlenecks on 10%.",
-        project3Title: "Gym Website Development:",
-        project3Desc: "Contributed in the full-stack development of the web application for 'Level Up Canarias', enabling membership management and class scheduling. Utilized JavaScript, Vue.js, HTML/CSS for the front-end, and Python/Django for the back-end.",
-        
+        projectsTitle: "Proyectos",
+        project1Title: "Nformar Website",
+        project1Desc: "Led a group of 6 web engineers to develop a complete and professional website with all the necessary features and requirements for the brand.\nDeveloped over 80% of the front-end code for the company’s website using Vue.js and Bootstrap, ensuring a seamless user experience and responsive design, for which I had to design an appropriate web and consider the style and professional appearance of the website.",
+        project2Title: "Cyber Security Project",
+        project2Desc: "Conducted in-depth penetration testing on two webs, identifying 17 critical vulnerabilities related to the OWASP Top 10 vulnerabilities.\nDeveloped a 20-page security report outlining vulnerabilities, more potential breaches, and a concise long-term plan to enhance the security posture of both physical and virtual systems, targeting a projected 50% reduction in exploitable vulnerabilities in a year.",
+        project3Title: "Gym App",
+        project3Desc: "Contributed in the full-stack development of the application for the gym, enabling membership management and class scheduling, increasing sells and enrolments over 40%, using C# and Swift for the iOS app development and MySQL for the database.",
+        project4Title: "AI image recognition",
+        project4Desc: "Developed and trained an animal recognition AI model using the Inaturalist 2017 dataset, using Pandas and TensorFlow libraries.\nImplemented effective overfitting reduction techniques, resulting in a 27% improvement in model performance.\nAchieved a 99% accuracy rate on the latest animal recognition model, demonstrating proficiency in AI development and optimization.",
+        project5Title: "Job Seeker Web App",
+        project5Desc: "Led a group project developing a software solution that allows employers to post job descriptions and advertisements.\nImplemented a matchmaking algorithm to find the best match between job offers and job seekers.\nDevelop a CV parser to gather all the personal information of a job seeker’s curriculum automatically using python and spaCy.",
+        project6Title: "Robot State Machine & Object Detection",
+        project6Desc: "Developed a state machine in Python to autonomously move a robot through different rooms using ROS (Robot Operating System).\nImplemented YOLO (You Only Look Once) for real-time object identification and recognition.",
+        project7Title: "COVID Data Explorer",
+        project7Desc: "Co-developed a GUI application for exploring COVID data collected in London.\nContributed to the construction of a robust data pipeline on the Ignitus LMS database to streamline data processing and analysis.\nUsed Java and JavaFX for the front-end and implemented several Python algorithms to analyse over 60,000 data points using NumPy, Pandas and Matplotlib libraries, gaining hands-on experience in data analysis, including data cleaning, exploration, and visualization.",
+
         educationTitle: "Education",
-        education1Title: "MSci Computer Science",
-        education1Desc: "<em>King's College London, UK September 2023 - Present (expected graduation 2027)</em>",
+        education1Title: "BSc Computer Science (First-class Honours)",
+        education1Desc: "<em>King's College London, UK | September 2023 - June 2026</em>",
         education1Points: [
-            "Achieved First-class Honours in all modules",
-            "Relevant courses: Software Engineering, Artificial Intelligence, Robotics, Data Structures"
+            "Relevant Modules: Database Systems, Data Structures, Software Engineering, Operating Systems, Machine Learning, Artificial Intelligence."
         ],
-        education2Title: "International Baccalaureate (IB) & Spanish National Baccalaureate",
-        education2Desc: "<em>Colegio Arenas, Spain September 2019 - June 2023</em>",
+        education2Title: "Spanish National Baccalaureate (10/10)",
+        education2Desc: "<em>Arenas Atlantic, Spain | September 2021 - July 2023</em>",
         education2Points: [
-            "Graduated with highest honours in both programs."
+            "Relevant subjects: Mathematics II, Information and Communication of Technology II, Physics, Administration and Management."
+        ],
+        education3Title: "International Baccalaureate (IB) (41 out of 45)",
+        education3Desc: "<em>Diploma Programme | September 2022 - July 2023</em>",
+        education3Points: [
+            "Subjects: Mathematics: Analysis and Approaches HL, Physics SL, Philosophy HL, Biology SL, Spanish Literature SL, English HL."
         ]
     },
     es: {
         profileSubtitle: "Estudiante en Ingenieria Informatica",
         skillsTitle: "Habilidades",
-        footerText: "© Sitio web creado por Alejandro Newport - Última actualización enero 2025",
+        footerText: "© Sitio web creado por Alejandro Newport - Última actualización mayo 2025",
         heroTitle: "Mi Portafolio",
         heroText1: "Estudiante de Ingenieria Informatica en King’s College London, cursando un grado y master con honores. Con una sólida base académica en Inteligencia Artificial, Desarrollo Web Full-stack, Ingeniería de Software, Estructuras de Datos y Algoritmos, y una pasión por la innovación, el enfoque está en construir soluciones tecnológicas eficientes e impactantes para problemas del mundo real.",
         heroText2: "Competente en múltiples lenguajes de programación como Python, Java, C++, Scala, JavaScript, así como en frameworks como Vue.js, Node.js y Django. Esta experiencia está respaldada por trabajos prácticos en Grupo Newport y varios proyectos. Reconocido por la capacidad única de combinar conocimientos técnicos con creatividad, entregando soluciones innovadoras de manera constante. Dedicado a aprovechar tecnologías avanzadas para crear herramientas transformadoras que optimicen el rendimiento y mejoren la experiencia del usuario.",
         
-        workExperienceTitle: "Experiencia Laboral",
-        jobTitle: "Desarrollador de Software y Técnico de Sistemas",
-        jobCompany: "<em><a href='https://gruponewport.com' target='_blank'>Grupo Newport</a>, España (Junio 2024 - Septiembre 2024)</em>",
-        jobPoints: [
-            "Proporcionó soporte de sistemas informáticos en toda la empresa, implementando procesos de automatización para mejorar la eficiencia general en un 30%, asegurando una funcionalidad óptima.",
-            "Reparó hardware dañado e instaló múltiples paquetes de software para aproximadamente 200 unidades de computadora.",
-            "Colaboró con equipos multifuncionales, integrando soluciones de software en todos los departamentos y mejorando la funcionalidad del sistema.",
-            "Desarrolló el 100% del código front-end para el sitio web de la empresa <a href='https://nformar.com/' target='_blank'>NFORMAR</a>, asegurando una experiencia de usuario fluida y un diseño responsivo."
-        ],
-        
         projectsTitle: "Proyectos",
-        project1Title: "Desarrollo de Dron Autónomo:",
-        project1Desc: "Diseñó y desarrolló un dron autónomo capaz de navegar en entornos complejos utilizando algoritmos de IA y datos de sensores integrados para mejorar la precisión del vuelo y evitar obstáculos. Tecnologías: Python, C++, TensorFlow, Arduino.",
-        project2Title: "Proyectos de Hackathon:",
-        project2Desc: "Participó en varios hackathons, logrando posiciones en el podio con proyectos que abordaron problemas del mundo real utilizando IA y aprendizaje automático. Desarrolló una aplicación web que optimizó el procesamiento de datos para PYMEs, reduciendo los cuellos de botella operativos en un 10%.",
-        project3Title: "Desarrollo de Sitio Web para Gimnasio:",
-        project3Desc: "Contribuyó en el desarrollo full-stack de la aplicación web para 'Level Up Canarias', permitiendo la gestión de membresías y la programación de clases. Utilizó JavaScript, Vue.js, HTML/CSS para el front-end, y Python/Django para el back-end.",
-        
+        project1Title: "Página web de Nformar",
+        project1Desc: "Lideré un grupo de 6 ingenieros web para desarrollar una página web completa y profesional con todas las características y requisitos necesarios para la marca.\nDesarrollé más del 80% del código front-end de la página web de la empresa utilizando Vue.js y Bootstrap, asegurando una experiencia de usuario fluida y un diseño responsivo, para lo cual tuve que diseñar una web apropiada y considerar el estilo y la apariencia profesional de la página.",
+        project2Title: "Proyecto de Ciberseguridad",
+        project2Desc: "Realicé pruebas de penetración exhaustivas en dos páginas web, identificando 17 vulnerabilidades críticas relacionadas con las vulnerabilidades del OWASP Top 10.\nDesarrollé un informe de seguridad de 20 páginas que describe vulnerabilidades, posibles brechas adicionales y un plan a largo plazo conciso para mejorar la postura de seguridad de ambos sistemas físicos y virtuales, con el objetivo de reducir en un 50% las vulnerabilidades explotables en un año.",
+        project3Title: "Aplicación de Gimnasio",
+        project3Desc: "Contribuí al desarrollo full-stack de la aplicación para el gimnasio, permitiendo la gestión de membresías y la programación de clases, aumentando las ventas y las inscripciones en más del 40%, utilizando C# y Swift para el desarrollo de la aplicación iOS y MySQL para la base de datos.",
+        project4Title: "Reconocimiento de imágenes con IA",
+        project4Desc: "Desarrollé y entrené un modelo de IA para el reconocimiento de animales utilizando el conjunto de datos Inaturalist 2017, utilizando las bibliotecas Pandas y TensorFlow.\nImplementé técnicas efectivas de reducción de sobreajuste, lo que resultó en una mejora del 27% en el rendimiento del modelo.\nLogré una tasa de precisión del 99% en el último modelo de reconocimiento de animales, demostrando competencia en el desarrollo y optimización de IA.",
+        project5Title: "Aplicación web para búsqueda de empleo",
+        project5Desc: "Lideré un proyecto grupal desarrollando una solución de software que permite a los empleadores publicar descripciones y anuncios de trabajo.\nImplementé un algoritmo de emparejamiento para encontrar la mejor coincidencia entre ofertas de trabajo y solicitantes de empleo.\nDesarrollé un analizador de CV para recopilar automáticamente toda la información personal del currículum de un solicitante de empleo utilizando Python y spaCy.",
+        project6Title: "Máquina de estados de robot y detección de objetos",
+        project6Desc: "Desarrollé una máquina de estados en Python para mover un robot de forma autónoma a través de diferentes habitaciones utilizando ROS (Robot Operating System).\nImplementé YOLO (You Only Look Once) para la identificación y reconocimiento de objetos en tiempo real.",
+        project7Title: "Explorador de datos COVID",
+        project7Desc: "Coprogramé una aplicación GUI para explorar datos de COVID recopilados en Londres.\nContribuí a la construcción de un canal de datos robusto en la base de datos Ignitus LMS para agilizar el procesamiento y análisis de datos.\nUtilicé Java y JavaFX para el front-end e implementé varios algoritmos en Python para analizar más de 60,000 puntos de datos utilizando las bibliotecas NumPy, Pandas y Matplotlib, adquiriendo experiencia práctica en análisis de datos, incluida la limpieza, exploración y visualización de datos.",
+
         educationTitle: "Educación",
-        education1Title: "MSci Ciencias de la Computación",
-        education1Desc: "<em>King's College London, Reino Unido Septiembre 2023 - Presente (graduación esperada 2027)</em>",
+        education1Title: "Grado en Ingenieria Informática (10 de media)",
+        education1Desc: "<em>King's College London, UK | Septiembre 2023 - Junio 2026</em>",
         education1Points: [
-            "Logró honores de primera clase en todos los módulos",
-            "Cursos relevantes: Ingeniería de Software, Inteligencia Artificial, Robótica, Estructuras de Datos"
+            "Módulos relevantes: Sistemas de Bases de Datos, Estructuras de Datos, Ingeniería de Software, Sistemas Operativos, Aprendizaje Automático, Inteligencia Artificial."
         ],
-        education2Title: "Bachillerato Internacional (IB) y Bachillerato Nacional Español",
-        education2Desc: "<em>Colegio Arenas, España Septiembre 2019 - Junio 2023</em>",
+        education2Title: "Bachillerato Nacional Español (10/10)",
+        education2Desc: "<em>Colegio Arenas Atlantico, España | Septiembre 2021 - Julio 2023</em>",
         education2Points: [
-            "Graduado con los más altos honores en ambos programas."
+            "Asignaturas relevantes: Matemáticas II, Tecnología de la Información y Comunicación II, Física, Administración y Gestión."
+        ],
+        education3Title: "Bachillerato Internacional (BI) (41 de 45)",
+        education3Desc: "<em>Programa del Diploma | Septiembre 2022 - Julio 2023</em>",
+        education3Points: [
+            "Asignaturas: Matemáticas: Análisis y Enfoques HL, Física SL, Filosofía HL, Biología SL, Literatura Española SL, Inglés HL."
         ]
     },
 };
@@ -92,13 +96,6 @@ function updateLanguage(lang) {
     document.querySelector(".hero h2").textContent = content[lang].heroTitle;
     document.querySelectorAll(".hero p")[0].textContent = content[lang].heroText1;
     document.querySelectorAll(".hero p")[1].textContent = content[lang].heroText2;
-    document.querySelector(".experience h3").textContent = content[lang].workExperienceTitle;
-    document.querySelector(".job-title").textContent = content[lang].jobTitle;
-    document.querySelector(".job-companie").innerHTML = content[lang].jobCompany;
-    const jobPoints = document.querySelectorAll(".job-point");
-    content[lang].jobPoints.forEach((point, index) => {
-        jobPoints[index].innerHTML = point;
-    });
     
     document.querySelector(".projects h3").textContent = content[lang].projectsTitle;
     document.querySelectorAll(".project-title")[0].textContent = content[lang].project1Title;
@@ -107,6 +104,14 @@ function updateLanguage(lang) {
     document.querySelectorAll(".project-desc")[1].textContent = content[lang].project2Desc;
     document.querySelectorAll(".project-title")[2].textContent = content[lang].project3Title;
     document.querySelectorAll(".project-desc")[2].textContent = content[lang].project3Desc;
+    document.querySelectorAll(".project-title")[3].textContent = content[lang].project4Title;
+    document.querySelectorAll(".project-desc")[3].textContent = content[lang].project4Desc;
+    document.querySelectorAll(".project-title")[4].textContent = content[lang].project5Title;
+    document.querySelectorAll(".project-desc")[4].textContent = content[lang].project5Desc;
+    document.querySelectorAll(".project-title")[5].textContent = content[lang].project6Title;
+    document.querySelectorAll(".project-desc")[5].textContent = content[lang].project6Desc;
+    document.querySelectorAll(".project-title")[6].textContent = content[lang].project7Title;
+    document.querySelectorAll(".project-desc")[6].textContent = content[lang].project7Desc;
 
     document.querySelector(".education h3").textContent = content[lang].educationTitle;
     document.querySelectorAll(".education-item h4")[0].textContent = content[lang].education1Title;
@@ -120,6 +125,12 @@ function updateLanguage(lang) {
     const education2Points = document.querySelectorAll(".education-item ul")[1].children;
     content[lang].education2Points.forEach((point, index) => {
         education2Points[index].textContent = point;
+    });
+    document.querySelectorAll(".education-item h4")[2].textContent = content[lang].education3Title;
+    document.querySelectorAll(".education-item p")[2].innerHTML = content[lang].education3Desc;
+    const education3Points = document.querySelectorAll(".education-item ul")[2].children;
+    content[lang].education3Points.forEach((point, index) => {
+        education3Points[index].textContent = point;
     });
 }
 
