@@ -3,56 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alejandro Newport</title>
+    
+    <!-- Primary Meta Tags -->
+    <title>Alejandro Newport Diaz - Computer Science Student & Software Developer</title>
+    <meta name="title" content="Alejandro Newport Diaz - Computer Science Student & Software Developer">
+    <meta name="description" content="Computer Science student at King's College London with expertise in AI, full-stack development, cybersecurity, and software engineering. Discover my projects in machine learning, web development, and data analysis.">
+    <meta name="keywords" content="Computer Science, Software Developer, King's College London, Artificial Intelligence, Machine Learning, Web Development, Cybersecurity, Python, JavaScript, React, Vue.js, Portfolio">
+    <meta name="author" content="Alejandro Newport Diaz">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ale-newport.github.io/Alejandro-Newport/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ale-newport.github.io/Alejandro-Newport/">
+    <meta property="og:title" content="Alejandro Newport Diaz - Computer Science Student & Software Developer">
+    <meta property="og:description" content="Computer Science student at King's College London with expertise in AI, full-stack development, cybersecurity, and software engineering. Discover my projects in machine learning, web development, and data analysis.">
+    <meta property="og:image" content="https://ale-newport.github.io/Alejandro-Newport/img/profile.jpg">
+    <meta property="og:site_name" content="Alejandro Newport Portfolio">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://ale-newport.github.io/Alejandro-Newport/">
+    <meta property="twitter:title" content="Alejandro Newport Diaz - Computer Science Student & Software Developer">
+    <meta property="twitter:description" content="Computer Science student at King's College London with expertise in AI, full-stack development, cybersecurity, and software engineering.">
+    <meta property="twitter:image" content="https://ale-newport.github.io/Alejandro-Newport/img/profile.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="img/profile.jpg" as="image">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- External resources -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Alejandro Newport Diaz",
+        "jobTitle": "Computer Science Student",
+        "description": "Computer Science student at King's College London specializing in AI, software development, and cybersecurity",
+        "url": "https://ale-newport.github.io/Alejandro-Newport",
+        "image": "https://ale-newport.github.io/Alejandro-Newport/img/profile.jpg",
+        "sameAs": [
+            "https://www.linkedin.com/in/alejandro-newport",
+            "https://github.com/Ale-Newport"
+        ],
+        "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "King's College London"
+        },
+        "knowsAbout": [
+            "Computer Science",
+            "Artificial Intelligence",
+            "Machine Learning",
+            "Software Engineering",
+            "Web Development",
+            "Cybersecurity",
+            "Data Analysis",
+            "Python",
+            "JavaScript",
+            "Vue.js",
+            "React",
+            "Node.js"
+        ],
+        "hasOccupation": {
+            "@type": "Occupation",
+            "name": "Computer Science Student",
+            "occupationLocation": {
+                "@type": "Place",
+                "name": "London, UK"
+            }
+        }
+    }
+    </script>
 </head>
 
 <body>
-    <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+    <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu">
         <i class="fas fa-bars"></i>
     </button>
 
     <div class="container">
         <!-- Sidebar -->
-        <aside class="sidebar" id="sidebar">
+        <aside class="sidebar" id="sidebar" role="complementary">
             <div class="profile">
-                <img src="img/profile.jpg" alt="Alejandro Newport" class="profile-img">
+                <img src="img/profile.jpg" alt="Alejandro Newport Diaz - Computer Science Student at King's College London" class="profile-img" width="200" height="200">
                 <h1>Alejandro Newport Diaz</h1>
                 <p><strong>MSci Computer Science Student</strong></p>
             </div>
             
-            <!-- socials -->
-            <div class="socials-div">
+            <!-- Social Links -->
+            <nav class="socials-div" aria-label="Social media links">
                 <ul class="socials">
-                    <li class="social"><a href="https://www.linkedin.com/in/alejandro-newport" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
-                    <li class="social"><a href="https://github.com/Ale-Newport" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+                    <li class="social">
+                        <a href="https://www.linkedin.com/in/alejandro-newport" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                    </li>
+                    <li class="social">
+                        <a href="https://github.com/Ale-Newport" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </li>
                 </ul>
-            </div>
+            </nav>
             
-            <!-- switches -->
-            <div class="switches">
+            <!-- Controls -->
+            <div class="switches" role="group" aria-label="Site controls">
                 <div class="switch-container">
-                    <label class="switch-flag">
-                        <input type="checkbox" id="language-switch">
+                    <label class="switch-flag" aria-label="Language toggle">
+                        <input type="checkbox" id="language-switch" aria-describedby="language-description">
                         <span class="slider-flag">
                             <div class="flag-wrapper">
-                                <img src="img/uk-flag.png" alt="uk" class="flag flag-uk">
-                                <img src="img/spain-flag.png" alt="es" class="flag flag-es">
+                                <img src="img/uk-flag.png" alt="English" class="flag flag-uk" width="20" height="20">
+                                <img src="img/spain-flag.png" alt="Español" class="flag flag-es" width="20" height="20">
                             </div>
                         </span>
                     </label>
+                    <span id="language-description" class="sr-only">Toggle between English and Spanish</span>
                 </div>
                 <div class="switch-container">
-                    <label class="switch-theme">
-                        <input type="checkbox" id="theme-switch" class="theme-switch-input">
+                    <label class="switch-theme" aria-label="Theme toggle">
+                        <input type="checkbox" id="theme-switch" class="theme-switch-input" aria-describedby="theme-description">
                         <span class="slider-theme">
                             <div class="icon-wrapper">
-                                <div class="moon"></div>
-                                <div class="sun"></div>
+                                <div class="moon" aria-hidden="true"></div>
+                                <div class="sun" aria-hidden="true"></div>
                             </div>
                         </span>
                     </label>
+                    <span id="theme-description" class="sr-only">Toggle between light and dark theme</span>
                 </div>
             </div>
             
@@ -63,85 +152,120 @@
         </aside>
 
         <!-- Main Content -->
-        <main class="main-content">
+        <main class="main-content" role="main">
             <!-- Hero Section -->
-            <section class="hero">
-                <h2 style="text-align: center;"></h2>
-                <p style="text-align: center;"></p>
-                <p style="text-align: center;"></p>
+            <section class="hero" aria-labelledby="hero-title">
+                <h2 id="hero-title">My Portfolio</h2>
+                <p>Computer Science student at King's College London, pursuing an MSci degree with First-class Honours. With a strong academic foundation in Artificial Intelligence, Full-stack Web Development, Software Engineering, Data Structures and Algorithms, paired with a passion for innovation, the focus is on building impactful and efficient technological solutions of real-world problems.</p>
+                <p>Proficient in multiple programming languages such as Python, Java, C++, Scala, JavaScript, as well as frameworks like Vue.js, Node.js, and Django. This expertise is underpinned by hands-on work experience in Grupo Newport and several projects. Recognized for a unique ability to merge technical knowledge with creativity, consistently delivering innovative solutions. Dedicated to leveraging advanced technologies to create transformative tools that optimize performance and enhance user experiences.</p>
             </section>
 
             <!-- Projects Section -->
-            <section class="projects">
-                <h3></h3>
-                <div class="project">
-                    <h4 class="project-title"></h4>
-                    <p class="project-desc"></p>
-                </div>
-                <div class="project">
-                    <h4 class="project-title"></h4>
-                    <p class="project-desc"></p>
-                </div>
-                <div class="project">
-                    <h4 class="project-title"></h4>
-                    <p class="project-desc"></p>
-                </div>
-                <div class="project">
-                    <h4 class="project-title"></h4>
-                    <p class="project-desc"></p>
-                </div>
-                <div class="project">
-                    <h4 class="project-title"></h4>
-                    <p class="project-desc"></p>
-                </div>
-                <div class="project">
-                    <h4 class="project-title"></h4>
-                    <p class="project-desc"></p>
-                </div>
-                <div class="project">
-                    <h4 class="project-title"></h4>
-                    <p class="project-desc"></p>
-                </div>
+            <section class="projects" aria-labelledby="projects-title">
+                <h3 id="projects-title">Projects</h3>
+                
+                <article class="project" itemscope itemtype="https://schema.org/CreativeWork">
+                    <h4 class="project-title" itemprop="name">Nformar Website</h4>
+                    <p class="project-desc" itemprop="description">Led a group of 6 web engineers to develop a complete and professional website with all the necessary features and requirements for the brand.
+Developed over 80% of the front-end code for the company's website using Vue.js and Bootstrap, ensuring a seamless user experience and responsive design, for which I had to design an appropriate web and consider the style and professional appearance of the website.</p>
+                    <meta itemprop="keywords" content="Vue.js, Bootstrap, Web Development, Frontend, Team Leadership">
+                </article>
+                
+                <article class="project" itemscope itemtype="https://schema.org/CreativeWork">
+                    <h4 class="project-title" itemprop="name">Cyber Security Project</h4>
+                    <p class="project-desc" itemprop="description">Conducted in-depth penetration testing on two webs, identifying 17 critical vulnerabilities related to the OWASP Top 10 vulnerabilities.
+Developed a 20-page security report outlining vulnerabilities, more potential breaches, and a concise long-term plan to enhance the security posture of both physical and virtual systems, targeting a projected 50% reduction in exploitable vulnerabilities in a year.</p>
+                    <meta itemprop="keywords" content="Cybersecurity, Penetration Testing, OWASP, Security Analysis">
+                </article>
+                
+                <article class="project" itemscope itemtype="https://schema.org/CreativeWork">
+                    <h4 class="project-title" itemprop="name">Gym App</h4>
+                    <p class="project-desc" itemprop="description">Contributed in the full-stack development of the application for the gym, enabling membership management and class scheduling, increasing sells and enrolments over 40%, using C# and Swift for the iOS app development and MySQL for the database.</p>
+                    <meta itemprop="keywords" content="C#, Swift, iOS Development, MySQL, Full-stack Development">
+                </article>
+                
+                <article class="project" itemscope itemtype="https://schema.org/CreativeWork">
+                    <h4 class="project-title" itemprop="name">AI Image Recognition</h4>
+                    <p class="project-desc" itemprop="description">Developed and trained an animal recognition AI model using the Inaturalist 2017 dataset, using Pandas and TensorFlow libraries.
+Implemented effective overfitting reduction techniques, resulting in a 27% improvement in model performance.
+Achieved a 99% accuracy rate on the latest animal recognition model, demonstrating proficiency in AI development and optimization.</p>
+                    <meta itemprop="keywords" content="Machine Learning, TensorFlow, Python, AI, Computer Vision">
+                </article>
+                
+                <article class="project" itemscope itemtype="https://schema.org/CreativeWork">
+                    <h4 class="project-title" itemprop="name">Job Seeker Web App</h4>
+                    <p class="project-desc" itemprop="description">Led a group project developing a software solution that allows employers to post job descriptions and advertisements.
+Implemented a matchmaking algorithm to find the best match between job offers and job seekers.
+Develop a CV parser to gather all the personal information of a job seeker's curriculum automatically using python and spaCy.</p>
+                    <meta itemprop="keywords" content="Python, spaCy, Algorithm Development, Natural Language Processing">
+                </article>
+                
+                <article class="project" itemscope itemtype="https://schema.org/CreativeWork">
+                    <h4 class="project-title" itemprop="name">Robot State Machine & Object Detection</h4>
+                    <p class="project-desc" itemprop="description">Developed a state machine in Python to autonomously move a robot through different rooms using ROS (Robot Operating System).
+Implemented YOLO (You Only Look Once) for real-time object identification and recognition.</p>
+                    <meta itemprop="keywords" content="Python, ROS, YOLO, Robotics, Computer Vision">
+                </article>
+                
+                <article class="project" itemscope itemtype="https://schema.org/CreativeWork">
+                    <h4 class="project-title" itemprop="name">COVID Data Explorer</h4>
+                    <p class="project-desc" itemprop="description">Co-developed a GUI application for exploring COVID data collected in London.
+Contributed to the construction of a robust data pipeline on the Ignitus LMS database to streamline data processing and analysis.
+Used Java and JavaFX for the front-end and implemented several Python algorithms to analyse over 60,000 data points using NumPy, Pandas and Matplotlib libraries, gaining hands-on experience in data analysis, including data cleaning, exploration, and visualization.</p>
+                    <meta itemprop="keywords" content="Java, JavaFX, Python, Data Analysis, NumPy, Pandas, Matplotlib">
+                </article>
             </section>
 
             <!-- Education Section -->
-            <section class="education">
-                <h3></h3>
-                <div class="education-item">
+            <section class="education" aria-labelledby="education-title">
+                <h3 id="education-title">Education</h3>
+                
+                <article class="education-item" itemscope itemtype="https://schema.org/EducationalOccupationalCredential">
                     <div class="education-text">
-                        <h4></h4>
-                        <p></p>
+                        <h4 itemprop="name">BSc Computer Science (First-class Honours)</h4>
+                        <p itemprop="description"><em>King's College London, UK | September 2023 - June 2026</em></p>
                         <ul>
-                            <li></li>
+                            <li itemprop="competencyRequired">Relevant Modules: Database Systems, Data Structures, Software Engineering, Operating Systems, Machine Learning, Artificial Intelligence.</li>
                         </ul>
+                        <meta itemprop="educationalLevel" content="Bachelor's Degree">
+                        <meta itemprop="credentialCategory" content="degree">
                     </div>
-                    <img src="img/kcl-logo.png" alt="King's College London" class="education-logo">
-                </div>
-                <div class="education-item">
+                    <img src="img/kcl-logo.png" alt="King's College London Logo" class="education-logo" width="150" height="auto">
+                </article>
+                
+                <article class="education-item" itemscope itemtype="https://schema.org/EducationalOccupationalCredential">
                     <div class="education-text">
-                        <h4></h4>
-                        <p></p>
+                        <h4 itemprop="name">Spanish National Baccalaureate (10/10)</h4>
+                        <p itemprop="description"><em>Arenas Atlantic, Spain | September 2021 - July 2023</em></p>
                         <ul>
-                            <li></li>
+                            <li itemprop="competencyRequired">Relevant subjects: Mathematics II, Information and Communication of Technology II, Physics, Administration and Management.</li>
                         </ul>
+                        <meta itemprop="educationalLevel" content="High School">
+                        <meta itemprop="credentialCategory" content="diploma">
                     </div>
-                    <img src="img/colegio-arenas-logo.png" alt="Colegio Arenas" class="education-logo">
-                </div>
-                <div class="education-item">
+                    <img src="img/colegio-arenas-logo.png" alt="Colegio Arenas Logo" class="education-logo" width="150" height="auto">
+                </article>
+                
+                <article class="education-item" itemscope itemtype="https://schema.org/EducationalOccupationalCredential">
                     <div class="education-text">
-                        <h4></h4>
-                        <p></p>
+                        <h4 itemprop="name">International Baccalaureate (IB) (41 out of 45)</h4>
+                        <p itemprop="description"><em>Diploma Programme | September 2022 - July 2023</em></p>
                         <ul>
-                            <li></li>
+                            <li itemprop="competencyRequired">Subjects: Mathematics: Analysis and Approaches HL, Physics SL, Philosophy HL, Biology SL, Spanish Literature SL, English HL.</li>
                         </ul>
+                        <meta itemprop="educationalLevel" content="High School">
+                        <meta itemprop="credentialCategory" content="diploma">
                     </div>
-                    <img src="img/ib-logo.png" alt="IB" class="education-logo">
-                </div>
+                    <img src="img/ib-logo.png" alt="International Baccalaureate Logo" class="education-logo" width="150" height="auto">
+                </article>
             </section>
         </main>
     </div>
 
+    <!-- Screen reader only content -->
+    <span class="sr-only">Alejandro Newport Diaz, Computer Science student specializing in artificial intelligence, machine learning, and software development</span>
+
     <script src="script.js"></script>
-    
+
 </body>
 </html>

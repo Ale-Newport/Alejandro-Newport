@@ -1,3 +1,16 @@
+/* Screen reader only class */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
 /* General Styles */
 * {
     box-sizing: border-box;
@@ -153,6 +166,7 @@ body.light-mode .education-item {
     height: 24px;
     background-color: #565656;
     border-radius: 20px;
+    cursor: pointer;
 }
 
 body.light-mode .switch-flag {
@@ -160,7 +174,9 @@ body.light-mode .switch-flag {
 }
 
 .switch-flag input {
-    display: none;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
 }
 
 .slider-flag {
@@ -233,7 +249,9 @@ body.light-mode .switch-theme {
 }
 
 .switch-theme input {
-    display: none;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
 }
 
 .slider-theme {
@@ -475,6 +493,15 @@ body.light-mode .switch-theme {
     padding: 10px;
     font-size: 1.2rem;
     cursor: pointer;
+}
+
+/* Focus styles for accessibility */
+.mobile-menu-toggle:focus,
+.switch-flag input:focus + .slider-flag,
+.switch-theme input:focus + .slider-theme,
+a:focus {
+    outline: 2px solid #3d8bff;
+    outline-offset: 2px;
 }
 
 /* Responsive Design */

@@ -39,7 +39,7 @@ const content = {
         project2Desc: "Conducted in-depth penetration testing on two webs, identifying 17 critical vulnerabilities related to the OWASP Top 10 vulnerabilities.\nDeveloped a 20-page security report outlining vulnerabilities, more potential breaches, and a concise long-term plan to enhance the security posture of both physical and virtual systems, targeting a projected 50% reduction in exploitable vulnerabilities in a year.",
         project3Title: "Gym App",
         project3Desc: "Contributed in the full-stack development of the application for the gym, enabling membership management and class scheduling, increasing sells and enrolments over 40%, using C# and Swift for the iOS app development and MySQL for the database.",
-        project4Title: "AI image recognition",
+        project4Title: "AI Image Recognition",
         project4Desc: "Developed and trained an animal recognition AI model using the Inaturalist 2017 dataset, using Pandas and TensorFlow libraries.\nImplemented effective overfitting reduction techniques, resulting in a 27% improvement in model performance.\nAchieved a 99% accuracy rate on the latest animal recognition model, demonstrating proficiency in AI development and optimization.",
         project5Title: "Job Seeker Web App",
         project5Desc: "Led a group project developing a software solution that allows employers to post job descriptions and advertisements.\nImplemented a matchmaking algorithm to find the best match between job offers and job seekers.\nDevelop a CV parser to gather all the personal information of a job seeker's curriculum automatically using python and spaCy.",
@@ -110,6 +110,21 @@ const content = {
 
 // Update text content
 function updateLanguage(lang) {
+    // Update language attribute
+    document.documentElement.lang = lang;
+    
+    // Update meta descriptions for SEO
+    document.querySelector('meta[name="description"]').content = 
+        lang === 'es' ? 
+        'Estudiante de Ingeniería Informática en King\'s College London especializado en IA, desarrollo full-stack, ciberseguridad e ingeniería de software. Descubre mis proyectos en machine learning, desarrollo web y análisis de datos.' :
+        'Computer Science student at King\'s College London with expertise in AI, full-stack development, cybersecurity, and software engineering. Discover my projects in machine learning, web development, and data analysis.';
+    
+    document.querySelector('meta[property="og:description"]').content = 
+        lang === 'es' ? 
+        'Estudiante de Ingeniería Informática en King\'s College London especializado en IA, desarrollo full-stack, ciberseguridad e ingeniería de software.' :
+        'Computer Science student at King\'s College London with expertise in AI, full-stack development, cybersecurity, and software engineering.';
+
+    // Update content
     document.querySelector(".profile p").textContent = content[lang].profileSubtitle;
     document.querySelector(".footbar p").textContent = content[lang].footerText;
     document.querySelector(".hero h2").textContent = content[lang].heroTitle;
@@ -173,3 +188,16 @@ window.addEventListener('resize', function() {
         sidebar.classList.remove('open');
     }
 });
+
+// Lazy loading for images
+if ('loading' in HTMLImageElement.prototype) {
+    const images = document.querySelectorAll('img[loading="lazy"]');
+    images.forEach(img => {
+        img.src = img.dataset.src;
+    });
+} else {
+    // Fallback for browsers that don't support lazy loading
+    const script = document.createElement('script');
+    script.src = 'https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver';
+    document.head.appendChild(script);
+}
