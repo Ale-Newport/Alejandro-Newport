@@ -1,3 +1,22 @@
+// Mobile menu toggle function
+function toggleMobileMenu() {
+    const sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('open');
+}
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', function(event) {
+    const sidebar = document.getElementById('sidebar');
+    const toggleButton = document.querySelector('.mobile-menu-toggle');
+    
+    if (window.innerWidth <= 768 && 
+        !sidebar.contains(event.target) && 
+        !toggleButton.contains(event.target) && 
+        sidebar.classList.contains('open')) {
+        sidebar.classList.remove('open');
+    }
+});
+
 // Dark Mode Toggle
 const themeSwitch = document.getElementById('theme-switch');
 themeSwitch.addEventListener('change', () => {
@@ -8,14 +27,14 @@ themeSwitch.addEventListener('change', () => {
 const content = {
     en: {
         profileSubtitle: "BSc Computer Science Student",
-        footerText: "© Website made by Alejandro Newport - Last update May 2025",
+        footerText: "© Website made by Alejandro Newport - Last update June 2025",
         heroTitle: "My Portfolio",
-        heroText1: "Computer Science student at King’s College London, pursuing an MSci degree with First-class Honours. With a strong academic foundation in Artificial Intelligence, Full-stack Web Development, Software Engineering, Data Structures and Algorithms, paired with a passion for innovation, the focus is on building impactful and efficient technological solutions of real-world problems.",
+        heroText1: "Computer Science student at King's College London, pursuing an MSci degree with First-class Honours. With a strong academic foundation in Artificial Intelligence, Full-stack Web Development, Software Engineering, Data Structures and Algorithms, paired with a passion for innovation, the focus is on building impactful and efficient technological solutions of real-world problems.",
         heroText2: "Proficient in multiple programming languages such as Python, Java, C++, Scala, JavaScript, as well as frameworks like Vue.js, Node.js, and Django. This expertise is underpinned by hands-on work experience in Grupo Newport and several projects. Recognized for a unique ability to merge technical knowledge with creativity, consistently delivering innovative solutions. Dedicated to leveraging advanced technologies to create transformative tools that optimize performance and enhance user experiences.",
         
-        projectsTitle: "Proyectos",
+        projectsTitle: "Projects",
         project1Title: "Nformar Website",
-        project1Desc: "Led a group of 6 web engineers to develop a complete and professional website with all the necessary features and requirements for the brand.\nDeveloped over 80% of the front-end code for the company’s website using Vue.js and Bootstrap, ensuring a seamless user experience and responsive design, for which I had to design an appropriate web and consider the style and professional appearance of the website.",
+        project1Desc: "Led a group of 6 web engineers to develop a complete and professional website with all the necessary features and requirements for the brand.\nDeveloped over 80% of the front-end code for the company's website using Vue.js and Bootstrap, ensuring a seamless user experience and responsive design, for which I had to design an appropriate web and consider the style and professional appearance of the website.",
         project2Title: "Cyber Security Project",
         project2Desc: "Conducted in-depth penetration testing on two webs, identifying 17 critical vulnerabilities related to the OWASP Top 10 vulnerabilities.\nDeveloped a 20-page security report outlining vulnerabilities, more potential breaches, and a concise long-term plan to enhance the security posture of both physical and virtual systems, targeting a projected 50% reduction in exploitable vulnerabilities in a year.",
         project3Title: "Gym App",
@@ -23,7 +42,7 @@ const content = {
         project4Title: "AI image recognition",
         project4Desc: "Developed and trained an animal recognition AI model using the Inaturalist 2017 dataset, using Pandas and TensorFlow libraries.\nImplemented effective overfitting reduction techniques, resulting in a 27% improvement in model performance.\nAchieved a 99% accuracy rate on the latest animal recognition model, demonstrating proficiency in AI development and optimization.",
         project5Title: "Job Seeker Web App",
-        project5Desc: "Led a group project developing a software solution that allows employers to post job descriptions and advertisements.\nImplemented a matchmaking algorithm to find the best match between job offers and job seekers.\nDevelop a CV parser to gather all the personal information of a job seeker’s curriculum automatically using python and spaCy.",
+        project5Desc: "Led a group project developing a software solution that allows employers to post job descriptions and advertisements.\nImplemented a matchmaking algorithm to find the best match between job offers and job seekers.\nDevelop a CV parser to gather all the personal information of a job seeker's curriculum automatically using python and spaCy.",
         project6Title: "Robot State Machine & Object Detection",
         project6Desc: "Developed a state machine in Python to autonomously move a robot through different rooms using ROS (Robot Operating System).\nImplemented YOLO (You Only Look Once) for real-time object identification and recognition.",
         project7Title: "COVID Data Explorer",
@@ -49,9 +68,9 @@ const content = {
     es: {
         profileSubtitle: "Estudiante en Ingenieria Informatica",
         skillsTitle: "Habilidades",
-        footerText: "© Sitio web creado por Alejandro Newport - Última actualización mayo 2025",
+        footerText: "© Sitio web creado por Alejandro Newport - Última actualización junio 2025",
         heroTitle: "Mi Portafolio",
-        heroText1: "Estudiante de Ingenieria Informatica en King’s College London, cursando un grado y master con honores. Con una sólida base académica en Inteligencia Artificial, Desarrollo Web Full-stack, Ingeniería de Software, Estructuras de Datos y Algoritmos, y una pasión por la innovación, el enfoque está en construir soluciones tecnológicas eficientes e impactantes para problemas del mundo real.",
+        heroText1: "Estudiante de Ingenieria Informatica en King's College London, cursando un grado y master con honores. Con una sólida base académica en Inteligencia Artificial, Desarrollo Web Full-stack, Ingeniería de Software, Estructuras de Datos y Algoritmos, y una pasión por la innovación, el enfoque está en construir soluciones tecnológicas eficientes e impactantes para problemas del mundo real.",
         heroText2: "Competente en múltiples lenguajes de programación como Python, Java, C++, Scala, JavaScript, así como en frameworks como Vue.js, Node.js y Django. Esta experiencia está respaldada por trabajos prácticos en Grupo Newport y varios proyectos. Reconocido por la capacidad única de combinar conocimientos técnicos con creatividad, entregando soluciones innovadoras de manera constante. Dedicado a aprovechar tecnologías avanzadas para crear herramientas transformadoras que optimicen el rendimiento y mejoren la experiencia del usuario.",
         
         projectsTitle: "Proyectos",
@@ -86,7 +105,7 @@ const content = {
         education3Points: [
             "Asignaturas: Matemáticas: Análisis y Enfoques HL, Física SL, Filosofía HL, Biología SL, Literatura Española SL, Inglés HL."
         ]
-    },
+    }
 };
 
 // Update text content
@@ -147,3 +166,10 @@ languageSwitch.addEventListener("change", () => {
 // Set initial language
 updateLanguage("en");
 
+// Handle window resize
+window.addEventListener('resize', function() {
+    const sidebar = document.getElementById('sidebar');
+    if (window.innerWidth > 768 && sidebar.classList.contains('open')) {
+        sidebar.classList.remove('open');
+    }
+});

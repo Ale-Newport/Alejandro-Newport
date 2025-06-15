@@ -7,22 +7,29 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+    <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+        <i class="fas fa-bars"></i>
+    </button>
+
     <div class="container">
         <!-- Sidebar -->
-        <aside class="sidebar">
+        <aside class="sidebar" id="sidebar">
             <div class="profile">
                 <img src="img/profile.jpg" alt="Alejandro Newport" class="profile-img">
                 <h1>Alejandro Newport Diaz</h1>
-                <p><striong>MSci Computer Science Student</striong></p>
+                <p><strong>MSci Computer Science Student</strong></p>
             </div>
+            
             <!-- socials -->
-             <div class="socials-div">
+            <div class="socials-div">
                 <ul class="socials">
                     <li class="social"><a href="https://www.linkedin.com/in/alejandro-newport" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
                     <li class="social"><a href="https://github.com/Ale-Newport" target="_blank"><i class="fa-brands fa-github"></i></a></li>
                 </ul>
-             </div>
+            </div>
+            
             <!-- switches -->
             <div class="switches">
                 <div class="switch-container">
@@ -48,13 +55,13 @@
                     </label>
                 </div>
             </div>
+            
             <!-- Footer -->
             <footer class="footbar">
                 <p></p>
             </footer>
         </aside>
 
-        
         <!-- Main Content -->
         <main class="main-content">
             <!-- Hero Section -->
@@ -133,6 +140,8 @@
             </section>
         </main>
     </div>
+
     <script src="script.js"></script>
+    
 </body>
 </html>
